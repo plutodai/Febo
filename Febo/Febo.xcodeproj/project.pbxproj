@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		845AAA8619F5372400E669CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8519F5372400E669CD /* Foundation.framework */; };
+		845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8719F5372400E669CD /* CoreGraphics.framework */; };
+		845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8919F5372400E669CD /* UIKit.framework */; };
+		845AAA8C19F5372400E669CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8B19F5372400E669CD /* CoreData.framework */; };
+		845AAA9219F5372400E669CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845AAA9019F5372400E669CD /* InfoPlist.strings */; };
+		845AAA9419F5372400E669CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAA9319F5372400E669CD /* main.m */; };
+		845AAA9819F5372400E669CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAA9719F5372400E669CD /* AppDelegate.m */; };
+		845AAA9B19F5372400E669CD /* Febo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 845AAA9919F5372400E669CD /* Febo.xcdatamodeld */; };
+		845AAA9D19F5372400E669CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845AAA9C19F5372400E669CD /* Images.xcassets */; };
+		845AAAA419F5372400E669CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAAA319F5372400E669CD /* XCTest.framework */; };
+		845AAAA519F5372400E669CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8519F5372400E669CD /* Foundation.framework */; };
+		845AAAA619F5372400E669CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8919F5372400E669CD /* UIKit.framework */; };
+		845AAAA719F5372400E669CD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8B19F5372400E669CD /* CoreData.framework */; };
+		845AAAAF19F5372400E669CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAAD19F5372400E669CD /* InfoPlist.strings */; };
+		845AAAB119F5372400E669CD /* FeboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAB019F5372400E669CD /* FeboTests.m */; };
+		845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAC019F5378C00E669CD /* BaseViewController.m */; };
+		845AAAC419F5379F00E669CD /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAC319F5379F00E669CD /* Common.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		845AAAA819F5372400E669CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 845AAA7A19F5372400E669CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 845AAA8119F5372400E669CD;
+			remoteInfo = Febo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		845AAA8219F5372400E669CD /* Febo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Febo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		845AAA8519F5372400E669CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		845AAA8719F5372400E669CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		845AAA8919F5372400E669CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		845AAA8B19F5372400E669CD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		845AAA8F19F5372400E669CD /* Febo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Febo-Info.plist"; sourceTree = "<group>"; };
+		845AAA9119F5372400E669CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		845AAA9319F5372400E669CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845AAA9519F5372400E669CD /* Febo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Febo-Prefix.pch"; sourceTree = "<group>"; };
+		845AAA9619F5372400E669CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		845AAA9719F5372400E669CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		845AAA9A19F5372400E669CD /* Febo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Febo.xcdatamodel; sourceTree = "<group>"; };
+		845AAA9C19F5372400E669CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		845AAAA219F5372400E669CD /* FeboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		845AAAA319F5372400E669CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		845AAAAC19F5372400E669CD /* FeboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeboTests-Info.plist"; sourceTree = "<group>"; };
+		845AAAAE19F5372400E669CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		845AAAB019F5372400E669CD /* FeboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeboTests.m; sourceTree = "<group>"; };
+		845AAABF19F5378C00E669CD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		845AAAC019F5378C00E669CD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		845AAAC219F5379F00E669CD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		845AAAC319F5379F00E669CD /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		845AAAC519F537B300E669CD /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		845AAA7F19F5372400E669CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */,
+				845AAA8C19F5372400E669CD /* CoreData.framework in Frameworks */,
+				845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */,
+				845AAA8619F5372400E669CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845AAA9F19F5372400E669CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAAA419F5372400E669CD /* XCTest.framework in Frameworks */,
+				845AAAA719F5372400E669CD /* CoreData.framework in Frameworks */,
+				845AAAA619F5372400E669CD /* UIKit.framework in Frameworks */,
+				845AAAA519F5372400E669CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		845AAA7919F5372400E669CD = {
+			isa = PBXGroup;
+			children = (
+				845AAA8D19F5372400E669CD /* Febo */,
+				845AAAAA19F5372400E669CD /* FeboTests */,
+				845AAA8419F5372400E669CD /* Frameworks */,
+				845AAA8319F5372400E669CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		845AAA8319F5372400E669CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				845AAA8219F5372400E669CD /* Febo.app */,
+				845AAAA219F5372400E669CD /* FeboTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		845AAA8419F5372400E669CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845AAA8519F5372400E669CD /* Foundation.framework */,
+				845AAA8719F5372400E669CD /* CoreGraphics.framework */,
+				845AAA8919F5372400E669CD /* UIKit.framework */,
+				845AAA8B19F5372400E669CD /* CoreData.framework */,
+				845AAAA319F5372400E669CD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845AAA8D19F5372400E669CD /* Febo */ = {
+			isa = PBXGroup;
+			children = (
+				845AAA9619F5372400E669CD /* AppDelegate.h */,
+				845AAA9719F5372400E669CD /* AppDelegate.m */,
+				845AAABA19F5376F00E669CD /* Common */,
+				845AAABB19F5376F00E669CD /* Images */,
+				845AAABC19F5376F00E669CD /* ThirdParts */,
+				845AAABD19F5376F00E669CD /* Tools */,
+				845AAABE19F5376F00E669CD /* ViewControllers */,
+				845AAA9C19F5372400E669CD /* Images.xcassets */,
+				845AAA9919F5372400E669CD /* Febo.xcdatamodeld */,
+				845AAA8E19F5372400E669CD /* Supporting Files */,
+			);
+			path = Febo;
+			sourceTree = "<group>";
+		};
+		845AAA8E19F5372400E669CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				845AAA8F19F5372400E669CD /* Febo-Info.plist */,
+				845AAA9019F5372400E669CD /* InfoPlist.strings */,
+				845AAA9319F5372400E669CD /* main.m */,
+				845AAA9519F5372400E669CD /* Febo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		845AAAAA19F5372400E669CD /* FeboTests */ = {
+			isa = PBXGroup;
+			children = (
+				845AAAB019F5372400E669CD /* FeboTests.m */,
+				845AAAAB19F5372400E669CD /* Supporting Files */,
+			);
+			path = FeboTests;
+			sourceTree = "<group>";
+		};
+		845AAAAB19F5372400E669CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				845AAAAC19F5372400E669CD /* FeboTests-Info.plist */,
+				845AAAAD19F5372400E669CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		845AAABA19F5376F00E669CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				845AAAC219F5379F00E669CD /* Common.h */,
+				845AAAC319F5379F00E669CD /* Common.m */,
+				845AAAC519F537B300E669CD /* Constant.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		845AAABB19F5376F00E669CD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		845AAABC19F5376F00E669CD /* ThirdParts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParts;
+			sourceTree = "<group>";
+		};
+		845AAABD19F5376F00E669CD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				845AAABF19F5378C00E669CD /* BaseViewController.h */,
+				845AAAC019F5378C00E669CD /* BaseViewController.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		845AAABE19F5376F00E669CD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		845AAA8119F5372400E669CD /* Febo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845AAAB419F5372400E669CD /* Build configuration list for PBXNativeTarget "Febo" */;
+			buildPhases = (
+				845AAA7E19F5372400E669CD /* Sources */,
+				845AAA7F19F5372400E669CD /* Frameworks */,
+				845AAA8019F5372400E669CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Febo;
+			productName = Febo;
+			productReference = 845AAA8219F5372400E669CD /* Febo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		845AAAA119F5372400E669CD /* FeboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845AAAB719F5372400E669CD /* Build configuration list for PBXNativeTarget "FeboTests" */;
+			buildPhases = (
+				845AAA9E19F5372400E669CD /* Sources */,
+				845AAA9F19F5372400E669CD /* Frameworks */,
+				845AAAA019F5372400E669CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				845AAAA919F5372400E669CD /* PBXTargetDependency */,
+			);
+			name = FeboTests;
+			productName = FeboTests;
+			productReference = 845AAAA219F5372400E669CD /* FeboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		845AAA7A19F5372400E669CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ckdai;
+				TargetAttributes = {
+					845AAAA119F5372400E669CD = {
+						TestTargetID = 845AAA8119F5372400E669CD;
+					};
+				};
+			};
+			buildConfigurationList = 845AAA7D19F5372400E669CD /* Build configuration list for PBXProject "Febo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 845AAA7919F5372400E669CD;
+			productRefGroup = 845AAA8319F5372400E669CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				845AAA8119F5372400E669CD /* Febo */,
+				845AAAA119F5372400E669CD /* FeboTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		845AAA8019F5372400E669CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAA9219F5372400E669CD /* InfoPlist.strings in Resources */,
+				845AAA9D19F5372400E669CD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845AAAA019F5372400E669CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAAAF19F5372400E669CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		845AAA7E19F5372400E669CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAA9819F5372400E669CD /* AppDelegate.m in Sources */,
+				845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */,
+				845AAAC419F5379F00E669CD /* Common.m in Sources */,
+				845AAA9B19F5372400E669CD /* Febo.xcdatamodeld in Sources */,
+				845AAA9419F5372400E669CD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845AAA9E19F5372400E669CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845AAAB119F5372400E669CD /* FeboTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		845AAAA919F5372400E669CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 845AAA8119F5372400E669CD /* Febo */;
+			targetProxy = 845AAAA819F5372400E669CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		845AAA9019F5372400E669CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845AAA9119F5372400E669CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		845AAAAD19F5372400E669CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845AAAAE19F5372400E669CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		845AAAB219F5372400E669CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		845AAAB319F5372400E669CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		845AAAB519F5372400E669CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
+				INFOPLIST_FILE = "Febo/Febo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		845AAAB619F5372400E669CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
+				INFOPLIST_FILE = "Febo/Febo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		845AAAB819F5372400E669CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Febo.app/Febo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FeboTests/FeboTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		845AAAB919F5372400E669CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Febo.app/Febo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
+				INFOPLIST_FILE = "FeboTests/FeboTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		845AAA7D19F5372400E669CD /* Build configuration list for PBXProject "Febo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845AAAB219F5372400E669CD /* Debug */,
+				845AAAB319F5372400E669CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845AAAB419F5372400E669CD /* Build configuration list for PBXNativeTarget "Febo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845AAAB519F5372400E669CD /* Debug */,
+				845AAAB619F5372400E669CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		845AAAB719F5372400E669CD /* Build configuration list for PBXNativeTarget "FeboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845AAAB819F5372400E669CD /* Debug */,
+				845AAAB919F5372400E669CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		845AAA9919F5372400E669CD /* Febo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				845AAA9A19F5372400E669CD /* Febo.xcdatamodel */,
+			);
+			currentVersion = 845AAA9A19F5372400E669CD /* Febo.xcdatamodel */;
+			path = Febo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 845AAA7A19F5372400E669CD /* Project object */;
+}
