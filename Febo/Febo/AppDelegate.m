@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "MessageViewController.h"
+#import "HotViewController.h"
+#import "UserCenterViewController.h"
 
 @implementation AppDelegate
 
@@ -14,10 +18,21 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+@synthesize rootNaVC;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    MessageViewController *messageVC = [[MessageViewController alloc] init];
+    HotViewController *hotVC = [[HotViewController alloc] init];
+    UserCenterViewController *userCenterVC = [[UserCenterViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    [tabBarVC setViewControllers:[NSArray arrayWithObjects:homeVC, messageVC, hotVC, userCenterVC, nil]];
+    tabBarVC.tabBarItem
+    rootNaVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    self.window.rootViewController = rootNaVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

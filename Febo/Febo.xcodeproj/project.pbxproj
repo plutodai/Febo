@@ -24,6 +24,14 @@
 		845AAAB119F5372400E669CD /* FeboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAB019F5372400E669CD /* FeboTests.m */; };
 		845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAC019F5378C00E669CD /* BaseViewController.m */; };
 		845AAAC419F5379F00E669CD /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAC319F5379F00E669CD /* Common.m */; };
+		845AAACD19F53B2200E669CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAACB19F53B2200E669CD /* HomeViewController.m */; };
+		845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAACC19F53B2200E669CD /* HomeViewController.xib */; };
+		845AAAD219F53B3B00E669CD /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAD019F53B3B00E669CD /* MessageViewController.m */; };
+		845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAD119F53B3B00E669CD /* MessageViewController.xib */; };
+		845AAAD719F53B4500E669CD /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAD519F53B4500E669CD /* HotViewController.m */; };
+		845AAAD819F53B4500E669CD /* HotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAD619F53B4500E669CD /* HotViewController.xib */; };
+		845AAADC19F53B5200E669CD /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAADA19F53B5200E669CD /* UserCenterViewController.m */; };
+		845AAADD19F53B5200E669CD /* UserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAADB19F53B5200E669CD /* UserCenterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,18 @@
 		845AAAC219F5379F00E669CD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		845AAAC319F5379F00E669CD /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		845AAAC519F537B300E669CD /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		845AAACA19F53B2200E669CD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		845AAACB19F53B2200E669CD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		845AAACC19F53B2200E669CD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		845AAACF19F53B3B00E669CD /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		845AAAD019F53B3B00E669CD /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		845AAAD119F53B3B00E669CD /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		845AAAD419F53B4500E669CD /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		845AAAD519F53B4500E669CD /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		845AAAD619F53B4500E669CD /* HotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotViewController.xib; sourceTree = "<group>"; };
+		845AAAD919F53B5200E669CD /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		845AAADA19F53B5200E669CD /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		845AAADB19F53B5200E669CD /* UserCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +221,52 @@
 		845AAABE19F5376F00E669CD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				845AAAC619F53A6500E669CD /* Home */,
+				845AAAC719F53A7300E669CD /* Message */,
+				845AAAC819F53A8100E669CD /* Hot */,
+				845AAAC919F53AFC00E669CD /* UserCenter */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		845AAAC619F53A6500E669CD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				845AAACA19F53B2200E669CD /* HomeViewController.h */,
+				845AAACB19F53B2200E669CD /* HomeViewController.m */,
+				845AAACC19F53B2200E669CD /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		845AAAC719F53A7300E669CD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				845AAACF19F53B3B00E669CD /* MessageViewController.h */,
+				845AAAD019F53B3B00E669CD /* MessageViewController.m */,
+				845AAAD119F53B3B00E669CD /* MessageViewController.xib */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		845AAAC819F53A8100E669CD /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				845AAAD419F53B4500E669CD /* HotViewController.h */,
+				845AAAD519F53B4500E669CD /* HotViewController.m */,
+				845AAAD619F53B4500E669CD /* HotViewController.xib */,
+			);
+			name = Hot;
+			sourceTree = "<group>";
+		};
+		845AAAC919F53AFC00E669CD /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				845AAAD919F53B5200E669CD /* UserCenterViewController.h */,
+				845AAADA19F53B5200E669CD /* UserCenterViewController.m */,
+				845AAADB19F53B5200E669CD /* UserCenterViewController.xib */,
+			);
+			name = UserCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,8 +344,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845AAADD19F53B5200E669CD /* UserCenterViewController.xib in Resources */,
 				845AAA9219F5372400E669CD /* InfoPlist.strings in Resources */,
 				845AAA9D19F5372400E669CD /* Images.xcassets in Resources */,
+				845AAAD819F53B4500E669CD /* HotViewController.xib in Resources */,
+				845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */,
+				845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,11 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845AAAD719F53B4500E669CD /* HotViewController.m in Sources */,
 				845AAA9819F5372400E669CD /* AppDelegate.m in Sources */,
 				845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */,
 				845AAAC419F5379F00E669CD /* Common.m in Sources */,
 				845AAA9B19F5372400E669CD /* Febo.xcdatamodeld in Sources */,
 				845AAA9419F5372400E669CD /* main.m in Sources */,
+				845AAADC19F53B5200E669CD /* UserCenterViewController.m in Sources */,
+				845AAACD19F53B2200E669CD /* HomeViewController.m in Sources */,
+				845AAAD219F53B3B00E669CD /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
