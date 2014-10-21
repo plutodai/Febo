@@ -30,7 +30,6 @@
     UserCenterViewController *userCenterVC = [[UserCenterViewController alloc] init];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     [tabBarVC setViewControllers:[NSArray arrayWithObjects:homeVC, messageVC, hotVC, userCenterVC, nil]];
-    tabBarVC.tabBarItem
     rootNaVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
     self.window.rootViewController = rootNaVC;
     self.window.backgroundColor = [UIColor whiteColor];
