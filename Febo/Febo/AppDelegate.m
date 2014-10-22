@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "MessageViewController.h"
-#import "HotViewController.h"
+#import "SearchViewController.h"
 #import "UserCenterViewController.h"
 
 @implementation AppDelegate
@@ -26,10 +26,14 @@
     // Override point for customization after application launch.
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     MessageViewController *messageVC = [[MessageViewController alloc] init];
-    HotViewController *hotVC = [[HotViewController alloc] init];
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
     UserCenterViewController *userCenterVC = [[UserCenterViewController alloc] init];
+    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"tabbar_home"] tag:0];
+    messageVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:[UIImage imageNamed:@"tabbar_message"] tag:1];
+    searchVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"发现" image:[UIImage imageNamed:@"tabbar_search"] tag:2];
+    userCenterVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:[UIImage imageNamed:@"tabbar_usercenter"] tag:3];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    [tabBarVC setViewControllers:[NSArray arrayWithObjects:homeVC, messageVC, hotVC, userCenterVC, nil]];
+    [tabBarVC setViewControllers:[NSArray arrayWithObjects:homeVC, messageVC, searchVC, userCenterVC, nil]];
     rootNaVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
     self.window.rootViewController = rootNaVC;
     self.window.backgroundColor = [UIColor whiteColor];

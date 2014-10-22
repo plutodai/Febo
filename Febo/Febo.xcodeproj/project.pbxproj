@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1D43E319F78EAF00607BB5 /* tabbar_message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E019F78EAF00607BB5 /* tabbar_message@2x.png */; };
+		1B1D43E419F78EAF00607BB5 /* tabbar_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E119F78EAF00607BB5 /* tabbar_search@2x.png */; };
+		1B1D43E519F78EAF00607BB5 /* tabbar_usercenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E219F78EAF00607BB5 /* tabbar_usercenter@2x.png */; };
+		1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */; };
 		845AAA8619F5372400E669CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8519F5372400E669CD /* Foundation.framework */; };
 		845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8719F5372400E669CD /* CoreGraphics.framework */; };
 		845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8919F5372400E669CD /* UIKit.framework */; };
@@ -28,8 +32,8 @@
 		845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAACC19F53B2200E669CD /* HomeViewController.xib */; };
 		845AAAD219F53B3B00E669CD /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAD019F53B3B00E669CD /* MessageViewController.m */; };
 		845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAD119F53B3B00E669CD /* MessageViewController.xib */; };
-		845AAAD719F53B4500E669CD /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAD519F53B4500E669CD /* HotViewController.m */; };
-		845AAAD819F53B4500E669CD /* HotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAD619F53B4500E669CD /* HotViewController.xib */; };
+		845AAAD719F53B4500E669CD /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAAD519F53B4500E669CD /* SearchViewController.m */; };
+		845AAAD819F53B4500E669CD /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAAD619F53B4500E669CD /* SearchViewController.xib */; };
 		845AAADC19F53B5200E669CD /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AAADA19F53B5200E669CD /* UserCenterViewController.m */; };
 		845AAADD19F53B5200E669CD /* UserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845AAADB19F53B5200E669CD /* UserCenterViewController.xib */; };
 /* End PBXBuildFile section */
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1D43E019F78EAF00607BB5 /* tabbar_message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_message@2x.png"; sourceTree = "<group>"; };
+		1B1D43E119F78EAF00607BB5 /* tabbar_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_search@2x.png"; sourceTree = "<group>"; };
+		1B1D43E219F78EAF00607BB5 /* tabbar_usercenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_usercenter@2x.png"; sourceTree = "<group>"; };
+		1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@2x.png"; sourceTree = "<group>"; };
 		845AAA8219F5372400E669CD /* Febo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Febo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AAA8519F5372400E669CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		845AAA8719F5372400E669CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,9 +82,9 @@
 		845AAACF19F53B3B00E669CD /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		845AAAD019F53B3B00E669CD /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		845AAAD119F53B3B00E669CD /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
-		845AAAD419F53B4500E669CD /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
-		845AAAD519F53B4500E669CD /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
-		845AAAD619F53B4500E669CD /* HotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotViewController.xib; sourceTree = "<group>"; };
+		845AAAD419F53B4500E669CD /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		845AAAD519F53B4500E669CD /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		845AAAD619F53B4500E669CD /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		845AAAD919F53B5200E669CD /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		845AAADA19F53B5200E669CD /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		845AAADB19F53B5200E669CD /* UserCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 		845AAABB19F5376F00E669CD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */,
+				1B1D43E019F78EAF00607BB5 /* tabbar_message@2x.png */,
+				1B1D43E119F78EAF00607BB5 /* tabbar_search@2x.png */,
+				1B1D43E219F78EAF00607BB5 /* tabbar_usercenter@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -223,7 +235,7 @@
 			children = (
 				845AAAC619F53A6500E669CD /* Home */,
 				845AAAC719F53A7300E669CD /* Message */,
-				845AAAC819F53A8100E669CD /* Hot */,
+				845AAAC819F53A8100E669CD /* Search */,
 				845AAAC919F53AFC00E669CD /* UserCenter */,
 			);
 			path = ViewControllers;
@@ -249,14 +261,14 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
-		845AAAC819F53A8100E669CD /* Hot */ = {
+		845AAAC819F53A8100E669CD /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				845AAAD419F53B4500E669CD /* HotViewController.h */,
-				845AAAD519F53B4500E669CD /* HotViewController.m */,
-				845AAAD619F53B4500E669CD /* HotViewController.xib */,
+				845AAAD419F53B4500E669CD /* SearchViewController.h */,
+				845AAAD519F53B4500E669CD /* SearchViewController.m */,
+				845AAAD619F53B4500E669CD /* SearchViewController.xib */,
 			);
-			name = Hot;
+			name = Search;
 			sourceTree = "<group>";
 		};
 		845AAAC919F53AFC00E669CD /* UserCenter */ = {
@@ -346,10 +358,14 @@
 			files = (
 				845AAADD19F53B5200E669CD /* UserCenterViewController.xib in Resources */,
 				845AAA9219F5372400E669CD /* InfoPlist.strings in Resources */,
+				1B1D43E419F78EAF00607BB5 /* tabbar_search@2x.png in Resources */,
+				1B1D43E519F78EAF00607BB5 /* tabbar_usercenter@2x.png in Resources */,
 				845AAA9D19F5372400E669CD /* Images.xcassets in Resources */,
-				845AAAD819F53B4500E669CD /* HotViewController.xib in Resources */,
+				1B1D43E319F78EAF00607BB5 /* tabbar_message@2x.png in Resources */,
+				845AAAD819F53B4500E669CD /* SearchViewController.xib in Resources */,
 				845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */,
 				845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */,
+				1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845AAAD719F53B4500E669CD /* HotViewController.m in Sources */,
+				845AAAD719F53B4500E669CD /* SearchViewController.m in Sources */,
 				845AAA9819F5372400E669CD /* AppDelegate.m in Sources */,
 				845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */,
 				845AAAC419F5379F00E669CD /* Common.m in Sources */,
@@ -573,6 +589,7 @@
 				845AAAB619F5372400E669CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845AAAB719F5372400E669CD /* Build configuration list for PBXNativeTarget "FeboTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +598,7 @@
 				845AAAB919F5372400E669CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

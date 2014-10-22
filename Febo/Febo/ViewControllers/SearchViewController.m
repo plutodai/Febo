@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 ckdai. All rights reserved.
 //
 
-#import "HotViewController.h"
+#import "SearchViewController.h"
 
-@interface HotViewController ()
+@interface SearchViewController ()
 
 @end
 
-@implementation HotViewController
+@implementation SearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +27,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.navigationItem.title = @"发现";
 }
 
 - (void)didReceiveMemoryWarning
