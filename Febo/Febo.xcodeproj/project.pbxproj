@@ -11,6 +11,22 @@
 		1B1D43E419F78EAF00607BB5 /* tabbar_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E119F78EAF00607BB5 /* tabbar_search@2x.png */; };
 		1B1D43E519F78EAF00607BB5 /* tabbar_usercenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E219F78EAF00607BB5 /* tabbar_usercenter@2x.png */; };
 		1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */; };
+		1B1D43EC19F7934A00607BB5 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D43EA19F7934A00607BB5 /* HomeTableViewCell.m */; };
+		1B1D43ED19F7934A00607BB5 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43EB19F7934A00607BB5 /* HomeTableViewCell.xib */; };
+		1B1D43FE19F798DA00607BB5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */; };
+		1B1D43FF19F798DA00607BB5 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */; };
+		1B1D441A19F7A78100607BB5 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440219F7A78100607BB5 /* NSObject+SBJson.m */; };
+		1B1D441B19F7A78100607BB5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440519F7A78100607BB5 /* SBJsonParser.m */; };
+		1B1D441C19F7A78100607BB5 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440719F7A78100607BB5 /* SBJsonStreamParser.m */; };
+		1B1D441D19F7A78100607BB5 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440919F7A78100607BB5 /* SBJsonStreamParserAccumulator.m */; };
+		1B1D441E19F7A78100607BB5 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440B19F7A78100607BB5 /* SBJsonStreamParserAdapter.m */; };
+		1B1D441F19F7A78100607BB5 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440D19F7A78100607BB5 /* SBJsonStreamParserState.m */; };
+		1B1D442019F7A78100607BB5 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440F19F7A78100607BB5 /* SBJsonStreamWriter.m */; };
+		1B1D442119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m */; };
+		1B1D442219F7A78100607BB5 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441319F7A78100607BB5 /* SBJsonStreamWriterState.m */; };
+		1B1D442319F7A78100607BB5 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441519F7A78100607BB5 /* SBJsonTokeniser.m */; };
+		1B1D442419F7A78100607BB5 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */; };
+		1B1D442519F7A78100607BB5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441919F7A78100607BB5 /* SBJsonWriter.m */; };
 		845AAA8619F5372400E669CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8519F5372400E669CD /* Foundation.framework */; };
 		845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8719F5372400E669CD /* CoreGraphics.framework */; };
 		845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8919F5372400E669CD /* UIKit.framework */; };
@@ -53,6 +69,37 @@
 		1B1D43E119F78EAF00607BB5 /* tabbar_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_search@2x.png"; sourceTree = "<group>"; };
 		1B1D43E219F78EAF00607BB5 /* tabbar_usercenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_usercenter@2x.png"; sourceTree = "<group>"; };
 		1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@2x.png"; sourceTree = "<group>"; };
+		1B1D43E919F7934A00607BB5 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		1B1D43EA19F7934A00607BB5 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		1B1D43EB19F7934A00607BB5 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		1B1D43FD19F798DA00607BB5 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		1B1D440119F7A78100607BB5 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		1B1D440219F7A78100607BB5 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		1B1D440319F7A78100607BB5 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		1B1D440419F7A78100607BB5 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		1B1D440519F7A78100607BB5 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		1B1D440619F7A78100607BB5 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		1B1D440719F7A78100607BB5 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		1B1D440819F7A78100607BB5 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		1B1D440919F7A78100607BB5 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		1B1D440A19F7A78100607BB5 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		1B1D440B19F7A78100607BB5 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		1B1D440C19F7A78100607BB5 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		1B1D440D19F7A78100607BB5 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		1B1D440E19F7A78100607BB5 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		1B1D440F19F7A78100607BB5 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		1B1D441019F7A78100607BB5 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		1B1D441119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		1B1D441219F7A78100607BB5 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		1B1D441319F7A78100607BB5 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		1B1D441419F7A78100607BB5 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		1B1D441519F7A78100607BB5 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		1B1D441619F7A78100607BB5 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		1B1D441819F7A78100607BB5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		1B1D441919F7A78100607BB5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		845AAA8219F5372400E669CD /* Febo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Febo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AAA8519F5372400E669CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		845AAA8719F5372400E669CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1D43FE19F798DA00607BB5 /* libWeiboSDK.a in Frameworks */,
 				845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */,
 				845AAA8C19F5372400E669CD /* CoreData.framework in Frameworks */,
 				845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */,
@@ -116,6 +164,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1D43E819F7932200607BB5 /* CustomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				1B1D43E919F7934A00607BB5 /* HomeTableViewCell.h */,
+				1B1D43EA19F7934A00607BB5 /* HomeTableViewCell.m */,
+				1B1D43EB19F7934A00607BB5 /* HomeTableViewCell.xib */,
+			);
+			name = CustomeCell;
+			sourceTree = "<group>";
+		};
+		1B1D43FA19F798DA00607BB5 /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */,
+				1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */,
+				1B1D43FD19F798DA00607BB5 /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
+		1B1D440019F7A78100607BB5 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1B1D440119F7A78100607BB5 /* NSObject+SBJson.h */,
+				1B1D440219F7A78100607BB5 /* NSObject+SBJson.m */,
+				1B1D440319F7A78100607BB5 /* SBJson.h */,
+				1B1D440419F7A78100607BB5 /* SBJsonParser.h */,
+				1B1D440519F7A78100607BB5 /* SBJsonParser.m */,
+				1B1D440619F7A78100607BB5 /* SBJsonStreamParser.h */,
+				1B1D440719F7A78100607BB5 /* SBJsonStreamParser.m */,
+				1B1D440819F7A78100607BB5 /* SBJsonStreamParserAccumulator.h */,
+				1B1D440919F7A78100607BB5 /* SBJsonStreamParserAccumulator.m */,
+				1B1D440A19F7A78100607BB5 /* SBJsonStreamParserAdapter.h */,
+				1B1D440B19F7A78100607BB5 /* SBJsonStreamParserAdapter.m */,
+				1B1D440C19F7A78100607BB5 /* SBJsonStreamParserState.h */,
+				1B1D440D19F7A78100607BB5 /* SBJsonStreamParserState.m */,
+				1B1D440E19F7A78100607BB5 /* SBJsonStreamWriter.h */,
+				1B1D440F19F7A78100607BB5 /* SBJsonStreamWriter.m */,
+				1B1D441019F7A78100607BB5 /* SBJsonStreamWriterAccumulator.h */,
+				1B1D441119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m */,
+				1B1D441219F7A78100607BB5 /* SBJsonStreamWriterState.h */,
+				1B1D441319F7A78100607BB5 /* SBJsonStreamWriterState.m */,
+				1B1D441419F7A78100607BB5 /* SBJsonTokeniser.h */,
+				1B1D441519F7A78100607BB5 /* SBJsonTokeniser.m */,
+				1B1D441619F7A78100607BB5 /* SBJsonUTF8Stream.h */,
+				1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */,
+				1B1D441819F7A78100607BB5 /* SBJsonWriter.h */,
+				1B1D441919F7A78100607BB5 /* SBJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
 		845AAA7919F5372400E669CD = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +317,8 @@
 		845AAABC19F5376F00E669CD /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
+				1B1D440019F7A78100607BB5 /* SBJSON */,
+				1B1D43FA19F798DA00607BB5 /* libWeiboSDK */,
 			);
 			path = ThirdParts;
 			sourceTree = "<group>";
@@ -244,6 +346,7 @@
 		845AAAC619F53A6500E669CD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1B1D43E819F7932200607BB5 /* CustomeCell */,
 				845AAACA19F53B2200E669CD /* HomeViewController.h */,
 				845AAACB19F53B2200E669CD /* HomeViewController.m */,
 				845AAACC19F53B2200E669CD /* HomeViewController.xib */,
@@ -356,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1D43ED19F7934A00607BB5 /* HomeTableViewCell.xib in Resources */,
 				845AAADD19F53B5200E669CD /* UserCenterViewController.xib in Resources */,
 				845AAA9219F5372400E669CD /* InfoPlist.strings in Resources */,
 				1B1D43E419F78EAF00607BB5 /* tabbar_search@2x.png in Resources */,
@@ -366,6 +470,7 @@
 				845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */,
 				845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */,
 				1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */,
+				1B1D43FF19F798DA00607BB5 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,14 +489,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1D442219F7A78100607BB5 /* SBJsonStreamWriterState.m in Sources */,
+				1B1D441C19F7A78100607BB5 /* SBJsonStreamParser.m in Sources */,
 				845AAAD719F53B4500E669CD /* SearchViewController.m in Sources */,
+				1B1D441A19F7A78100607BB5 /* NSObject+SBJson.m in Sources */,
 				845AAA9819F5372400E669CD /* AppDelegate.m in Sources */,
+				1B1D43EC19F7934A00607BB5 /* HomeTableViewCell.m in Sources */,
 				845AAAC119F5378C00E669CD /* BaseViewController.m in Sources */,
+				1B1D442019F7A78100607BB5 /* SBJsonStreamWriter.m in Sources */,
 				845AAAC419F5379F00E669CD /* Common.m in Sources */,
+				1B1D442119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				845AAA9B19F5372400E669CD /* Febo.xcdatamodeld in Sources */,
+				1B1D442419F7A78100607BB5 /* SBJsonUTF8Stream.m in Sources */,
+				1B1D442319F7A78100607BB5 /* SBJsonTokeniser.m in Sources */,
+				1B1D442519F7A78100607BB5 /* SBJsonWriter.m in Sources */,
 				845AAA9419F5372400E669CD /* main.m in Sources */,
 				845AAADC19F53B5200E669CD /* UserCenterViewController.m in Sources */,
+				1B1D441B19F7A78100607BB5 /* SBJsonParser.m in Sources */,
+				1B1D441E19F7A78100607BB5 /* SBJsonStreamParserAdapter.m in Sources */,
 				845AAACD19F53B2200E669CD /* HomeViewController.m in Sources */,
+				1B1D441F19F7A78100607BB5 /* SBJsonStreamParserState.m in Sources */,
+				1B1D441D19F7A78100607BB5 /* SBJsonStreamParserAccumulator.m in Sources */,
 				845AAAD219F53B3B00E669CD /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +630,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
 				INFOPLIST_FILE = "Febo/Febo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Febo/ThirdParts/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -525,6 +647,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Febo/Febo-Prefix.pch";
 				INFOPLIST_FILE = "Febo/Febo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Febo/ThirdParts/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -9,6 +9,8 @@
 #ifndef Febo_Constant_h
 #define Febo_Constant_h
 
+#define WeiboAppKey @"4088152396"
+#define WeiboRedirectURL @"http://www.sina.com"
 
 
 #endif

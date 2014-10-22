@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AppDelegate;
 @interface BaseViewController : UIViewController
+
+- (AppDelegate *)appDelegate;
+- (NSString *)accessToken;
 
 @end

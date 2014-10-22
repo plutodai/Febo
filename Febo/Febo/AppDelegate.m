@@ -19,6 +19,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 @synthesize rootNaVC;
+@synthesize accessToken;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -38,6 +39,23 @@
     self.window.rootViewController = rootNaVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    //新浪微博注册
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:WeiboAppKey];
+    
+    NSDate *currentDate = [NSDate date];
+    NSDate *expirationDate = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"expirationDate"];
+    
+    if ([expirationDate compare:currentDate] == NSOrderedDescending) {
+        NSLog(@"还没过期");
+        accessToken = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"accessToken"];
+    }
+    else {
+        WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+        request.redirectURI = WeiboRedirectURL;
+        request.scope = @"all";
+        [WeiboSDK sendRequest:request];
+    }
     return YES;
 }
 
@@ -162,6 +180,39 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark 新浪微博回调
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+#pragma mark 微博delegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{
+    NSLog(@"%@", request);
+}
+
+/**
+ 收到一个来自微博客户端程序的响应
+ 
+ 收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 WBBaseResponse.userInfo 中的数据完成自己的功能
+ @param response 具体的响应对象
+ */
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    WBAuthorizeResponse *_WBAuthorizeResponse = (WBAuthorizeResponse *)response;
+    NSLog(@"%@", response);
+    accessToken = _WBAuthorizeResponse.accessToken;
+    NSDictionary *authInfo = [NSDictionary dictionaryWithObjects:@[_WBAuthorizeResponse.accessToken, _WBAuthorizeResponse.expirationDate] forKeys:@[@"accessToken", @"expirationDate"]];
+    [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:@"WeiboAuthInfo"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

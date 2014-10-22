@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, WBHttpRequestDelegate>
+{
+    IBOutlet UITableView *homeTable;
+    NSMutableArray *weiboList;
+}
 
 @end

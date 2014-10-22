@@ -35,6 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (AppDelegate *)appDelegate
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (NSString *)accessToken
+{
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"accessToken"];
+}
+
 /*
 #pragma mark - Navigation
 

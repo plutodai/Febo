@@ -14,4 +14,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import "WeiboSDK.h"
+#import "Common.h"
+#import "Constant.h"
+#import "AppDelegate.h"
+#import "SBJson.h"
 #endif
