@@ -13,7 +13,6 @@
 		1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43E619F78F3700607BB5 /* tabbar_home@2x.png */; };
 		1B1D43EC19F7934A00607BB5 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D43EA19F7934A00607BB5 /* HomeTableViewCell.m */; };
 		1B1D43ED19F7934A00607BB5 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43EB19F7934A00607BB5 /* HomeTableViewCell.xib */; };
-		1B1D43FE19F798DA00607BB5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */; };
 		1B1D43FF19F798DA00607BB5 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */; };
 		1B1D441A19F7A78100607BB5 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440219F7A78100607BB5 /* NSObject+SBJson.m */; };
 		1B1D441B19F7A78100607BB5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D440519F7A78100607BB5 /* SBJsonParser.m */; };
@@ -27,6 +26,7 @@
 		1B1D442319F7A78100607BB5 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441519F7A78100607BB5 /* SBJsonTokeniser.m */; };
 		1B1D442419F7A78100607BB5 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */; };
 		1B1D442519F7A78100607BB5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441919F7A78100607BB5 /* SBJsonWriter.m */; };
+		8408FD3C19F7D1EA0083292F /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8408FD3B19F7D1EA0083292F /* libWeiboSDK.a */; };
 		845AAA8619F5372400E669CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8519F5372400E669CD /* Foundation.framework */; };
 		845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8719F5372400E669CD /* CoreGraphics.framework */; };
 		845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845AAA8919F5372400E669CD /* UIKit.framework */; };
@@ -72,7 +72,6 @@
 		1B1D43E919F7934A00607BB5 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		1B1D43EA19F7934A00607BB5 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		1B1D43EB19F7934A00607BB5 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
-		1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		1B1D43FD19F798DA00607BB5 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		1B1D440119F7A78100607BB5 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1B1D441819F7A78100607BB5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1B1D441919F7A78100607BB5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		8408FD3B19F7D1EA0083292F /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		845AAA8219F5372400E669CD /* Febo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Febo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845AAA8519F5372400E669CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		845AAA8719F5372400E669CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1D43FE19F798DA00607BB5 /* libWeiboSDK.a in Frameworks */,
+				8408FD3C19F7D1EA0083292F /* libWeiboSDK.a in Frameworks */,
 				845AAA8819F5372400E669CD /* CoreGraphics.framework in Frameworks */,
 				845AAA8C19F5372400E669CD /* CoreData.framework in Frameworks */,
 				845AAA8A19F5372400E669CD /* UIKit.framework in Frameworks */,
@@ -177,7 +177,7 @@
 		1B1D43FA19F798DA00607BB5 /* libWeiboSDK */ = {
 			isa = PBXGroup;
 			children = (
-				1B1D43FB19F798DA00607BB5 /* libWeiboSDK.a */,
+				8408FD3B19F7D1EA0083292F /* libWeiboSDK.a */,
 				1B1D43FC19F798DA00607BB5 /* WeiboSDK.bundle */,
 				1B1D43FD19F798DA00607BB5 /* WeiboSDK.h */,
 			);

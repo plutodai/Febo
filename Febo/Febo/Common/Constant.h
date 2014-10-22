@@ -12,5 +12,14 @@
 #define WeiboAppKey @"4088152396"
 #define WeiboRedirectURL @"http://www.sina.com"
 
+//定义屏幕适应
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+//微博消息通知
+#define DidGetAccessTokenNotification @"DidGetAccessTokenNotification"
+
+//微博HTTP请求URL
+#define GetFriendsTimeline @"https://api.weibo.com/2/statuses/friends_timeline.json"
 
 #endif

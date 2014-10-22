@@ -49,6 +49,7 @@
     if ([expirationDate compare:currentDate] == NSOrderedDescending) {
         NSLog(@"还没过期");
         accessToken = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"accessToken"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
     }
     else {
         WBAuthorizeRequest *request = [WBAuthorizeRequest request];
@@ -56,6 +57,7 @@
         request.scope = @"all";
         [WeiboSDK sendRequest:request];
     }
+    
     return YES;
 }
 
@@ -213,6 +215,7 @@
     NSDictionary *authInfo = [NSDictionary dictionaryWithObjects:@[_WBAuthorizeResponse.accessToken, _WBAuthorizeResponse.expirationDate] forKeys:@[@"accessToken", @"expirationDate"]];
     [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:@"WeiboAuthInfo"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
 }
 
 @end

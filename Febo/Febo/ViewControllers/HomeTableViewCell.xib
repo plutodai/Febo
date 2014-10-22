@@ -50,10 +50,10 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jV-Gk-8gH">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="8jV-Gk-8gH">
                         <rect key="frame" x="20" y="55" width="280" height="166"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -76,6 +76,11 @@
                     <constraint firstItem="eqz-PK-H4C" firstAttribute="leading" secondItem="hkJ-t1-Gk9" secondAttribute="trailing" constant="8" id="xP7-3u-Wgf"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImage" destination="hkJ-t1-Gk9" id="Qe0-Zb-5W1"/>
+                <outlet property="contentLabel" destination="8jV-Gk-8gH" id="ihe-Ju-kxL"/>
+                <outlet property="nameLabel" destination="usJ-0b-hYt" id="tXv-ig-Xok"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

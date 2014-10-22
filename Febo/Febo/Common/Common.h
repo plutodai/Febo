@@ -10,4 +10,7 @@
 
 @interface Common : NSObject
 
+//字符串高度
++ (CGFloat)heightForString:(NSString *)string withFontSize:(CGFloat)fontSize labelWidth:(CGFloat)labelWidth;
+
 @end
