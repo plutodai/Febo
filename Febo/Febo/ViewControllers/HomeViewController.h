@@ -7,10 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "MJRefresh.h"
 
-@interface HomeViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, WBHttpRequestDelegate>
+@interface HomeViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, WBHttpRequestDelegate, MJRefreshBaseViewDelegate>
 {
     IBOutlet UITableView *homeTable;
+    IBOutlet MJRefreshHeaderView *refreshHeaderView;
     NSMutableArray *weiboList;
 }
 

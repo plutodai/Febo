@@ -1,18 +1,18 @@
 //
-//  HotViewController.m
+//  UserInfoViewController.m
 //  Febo
 //
-//  Created by Andrew on 14-10-20.
+//  Created by YY on 14-10-23.
 //  Copyright (c) 2014年 ckdai. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "UserInfoViewController.h"
 
-@interface SearchViewController ()
+@interface UserInfoViewController ()
 
 @end
 
-@implementation SearchViewController
+@implementation UserInfoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,12 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.tabBarController.navigationItem.title = @"发现";
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
 }
 
 - (void)didReceiveMemoryWarning

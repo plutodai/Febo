@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *contentLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateAndFromLabel;
+@property (strong, nonatomic) IBOutlet UILabel *repostWeiboLabel;
 
 @end

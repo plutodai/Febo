@@ -32,6 +32,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.navigationItem.title = @"消息";
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
 }
 
 - (void)didReceiveMemoryWarning

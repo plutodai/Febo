@@ -12,6 +12,9 @@
 #define WeiboAppKey @"4088152396"
 #define WeiboRedirectURL @"http://www.sina.com"
 
+//定义微博授权信息的键
+#define WeiboAuthInfo @"WeiboAuthInfo"
+
 //定义屏幕适应
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height

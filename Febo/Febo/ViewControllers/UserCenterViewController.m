@@ -32,12 +32,27 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.navigationItem.title = @"我";
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark 退出登录
+- (IBAction)logoutButtonClicked:(UIButton *)sender
+{
+    [WeiboSDK logOutWithToken:[self accessToken] delegate:self withTag:@"logout"];
+}
+
+#pragma mark 微博HTTP回调
+-(void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
+{
+    NSLog(@"%@", result);
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:WeiboAuthInfo];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

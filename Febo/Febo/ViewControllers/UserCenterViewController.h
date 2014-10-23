@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface UserCenterViewController : BaseViewController
+@interface UserCenterViewController : BaseViewController<WBHttpRequestDelegate>
 
 @end

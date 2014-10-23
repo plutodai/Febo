@@ -42,7 +42,7 @@
 
 - (NSString *)accessToken
 {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"accessToken"];
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"accessToken"];
 }
 
 /*

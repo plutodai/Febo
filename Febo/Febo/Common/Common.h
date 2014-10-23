@@ -13,4 +13,7 @@
 //字符串高度
 + (CGFloat)heightForString:(NSString *)string withFontSize:(CGFloat)fontSize labelWidth:(CGFloat)labelWidth;
 
+//去掉HTML字符串中的标签
++ (NSString *)filterHTML:(NSString *)html;
+
 @end

@@ -42,14 +42,20 @@
     //新浪微博注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:WeiboAppKey];
-    
-    NSDate *currentDate = [NSDate date];
-    NSDate *expirationDate = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"expirationDate"];
-    
-    if ([expirationDate compare:currentDate] == NSOrderedDescending) {
-        NSLog(@"还没过期");
-        accessToken = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthInfo"] objectForKey:@"accessToken"];
-        [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo]){
+        NSDate *currentDate = [NSDate date];
+        NSDate *expirationDate = [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"expirationDate"];
+        if ([expirationDate compare:currentDate] == NSOrderedDescending) {
+            NSLog(@"还没过期");
+            accessToken = [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"accessToken"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
+        }
+        else {
+            WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+            request.redirectURI = WeiboRedirectURL;
+            request.scope = @"all";
+            [WeiboSDK sendRequest:request];
+        }
     }
     else {
         WBAuthorizeRequest *request = [WBAuthorizeRequest request];
@@ -213,7 +219,7 @@
     NSLog(@"%@", response);
     accessToken = _WBAuthorizeResponse.accessToken;
     NSDictionary *authInfo = [NSDictionary dictionaryWithObjects:@[_WBAuthorizeResponse.accessToken, _WBAuthorizeResponse.expirationDate] forKeys:@[@"accessToken", @"expirationDate"]];
-    [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:@"WeiboAuthInfo"];
+    [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:WeiboAuthInfo];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
 }
