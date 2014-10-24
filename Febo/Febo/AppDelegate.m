@@ -42,29 +42,20 @@
     //新浪微博注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:WeiboAppKey];
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo]){
-        NSDate *currentDate = [NSDate date];
-        NSDate *expirationDate = [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"expirationDate"];
-        if ([expirationDate compare:currentDate] == NSOrderedDescending) {
-            NSLog(@"还没过期");
-            accessToken = [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"accessToken"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getWeiboAccessToken:) name:DidNotGetAccessTokenNotification object:nil];
+    if ([Common CheckLogin]){
             [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
-        }
-        else {
-            WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-            request.redirectURI = WeiboRedirectURL;
-            request.scope = @"all";
-            [WeiboSDK sendRequest:request];
-        }
     }
-    else {
-        WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-        request.redirectURI = WeiboRedirectURL;
-        request.scope = @"all";
-        [WeiboSDK sendRequest:request];
-    }
-    
     return YES;
+}
+
+//获取微博AccessToken方法
+- (void)getWeiboAccessToken:(NSNotification *)notification
+{
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = WeiboRedirectURL;
+    request.scope = @"all";
+    [WeiboSDK sendRequest:request];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -215,13 +206,20 @@
  */
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
-    WBAuthorizeResponse *_WBAuthorizeResponse = (WBAuthorizeResponse *)response;
-    NSLog(@"%@", response);
-    accessToken = _WBAuthorizeResponse.accessToken;
-    NSDictionary *authInfo = [NSDictionary dictionaryWithObjects:@[_WBAuthorizeResponse.accessToken, _WBAuthorizeResponse.expirationDate] forKeys:@[@"accessToken", @"expirationDate"]];
-    [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:WeiboAuthInfo];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
+    if (response.statusCode == WeiboSDKResponseStatusCodeSuccess) {
+        WBAuthorizeResponse *_WBAuthorizeResponse = (WBAuthorizeResponse *)response;
+        NSLog(@"%@", response);
+        accessToken = _WBAuthorizeResponse.accessToken;
+        NSDictionary *authInfo = [NSDictionary dictionaryWithObjects:@[_WBAuthorizeResponse.accessToken, _WBAuthorizeResponse.expirationDate] forKeys:@[@"accessToken", @"expirationDate"]];
+        [[NSUserDefaults standardUserDefaults] setObject:authInfo forKey:WeiboAuthInfo];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DidGetAccessTokenNotification object:nil];
+    }
+    else {
+        
+    }
+    
+    
 }
 
 @end

@@ -26,6 +26,9 @@
 		1B1D442319F7A78100607BB5 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441519F7A78100607BB5 /* SBJsonTokeniser.m */; };
 		1B1D442419F7A78100607BB5 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */; };
 		1B1D442519F7A78100607BB5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D441919F7A78100607BB5 /* SBJsonWriter.m */; };
+		1B8D68E019FA1C0900DB82BA /* WriteWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8D68DE19FA1C0900DB82BA /* WriteWeiboViewController.m */; };
+		1B8D68E119FA1C0900DB82BA /* WriteWeiboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8D68DF19FA1C0900DB82BA /* WriteWeiboViewController.xib */; };
+		1B8D68E519FA2E5E00DB82BA /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8D68E419FA2E5E00DB82BA /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1BA80B9F19F89FBB0029FE30 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA80B7F19F89FBB0029FE30 /* MKAnnotationView+WebCache.m */; };
 		1BA80BA019F89FBB0029FE30 /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA80B8119F89FBB0029FE30 /* NSData+GIF.m */; };
 		1BA80BA119F89FBB0029FE30 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA80B8319F89FBB0029FE30 /* SDImageCache.m */; };
@@ -124,6 +127,11 @@
 		1B1D441719F7A78100607BB5 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1B1D441819F7A78100607BB5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1B1D441919F7A78100607BB5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1B8D68DD19FA1C0900DB82BA /* WriteWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteWeiboViewController.h; sourceTree = "<group>"; };
+		1B8D68DE19FA1C0900DB82BA /* WriteWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteWeiboViewController.m; sourceTree = "<group>"; };
+		1B8D68DF19FA1C0900DB82BA /* WriteWeiboViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteWeiboViewController.xib; sourceTree = "<group>"; };
+		1B8D68E319FA2E5E00DB82BA /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		1B8D68E419FA2E5E00DB82BA /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		1BA80B7E19F89FBB0029FE30 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		1BA80B7F19F89FBB0029FE30 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		1BA80B8019F89FBB0029FE30 /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
@@ -289,6 +297,15 @@
 				1B1D441919F7A78100607BB5 /* SBJsonWriter.m */,
 			);
 			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		1B8D68E219FA2E5E00DB82BA /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				1B8D68E319FA2E5E00DB82BA /* Toast+UIView.h */,
+				1B8D68E419FA2E5E00DB82BA /* Toast+UIView.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		1BA80B7D19F89FBB0029FE30 /* SDWebImage */ = {
@@ -460,6 +477,7 @@
 		845AAABC19F5376F00E669CD /* ThirdParts */ = {
 			isa = PBXGroup;
 			children = (
+				1B8D68E219FA2E5E00DB82BA /* Toast */,
 				1BA80BAF19F8A2E20029FE30 /* MJRefresh */,
 				1BA80B7D19F89FBB0029FE30 /* SDWebImage */,
 				1B1D440019F7A78100607BB5 /* SBJSON */,
@@ -498,6 +516,9 @@
 				1BE3D8E719F8E10D00EB9C1D /* UserInfoViewController.h */,
 				1BE3D8E819F8E10D00EB9C1D /* UserInfoViewController.m */,
 				1BE3D8E919F8E10D00EB9C1D /* UserInfoViewController.xib */,
+				1B8D68DD19FA1C0900DB82BA /* WriteWeiboViewController.h */,
+				1B8D68DE19FA1C0900DB82BA /* WriteWeiboViewController.m */,
+				1B8D68DF19FA1C0900DB82BA /* WriteWeiboViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -620,6 +641,7 @@
 				845AAAD319F53B3B00E669CD /* MessageViewController.xib in Resources */,
 				845AAACE19F53B2200E669CD /* HomeViewController.xib in Resources */,
 				1BE3D8EE19F8E71300EB9C1D /* home_write_weibo.png in Resources */,
+				1B8D68E119FA1C0900DB82BA /* WriteWeiboViewController.xib in Resources */,
 				1B1D43E719F78F3700607BB5 /* tabbar_home@2x.png in Resources */,
 				1B1D43FF19F798DA00607BB5 /* WeiboSDK.bundle in Resources */,
 			);
@@ -653,6 +675,7 @@
 				1BA80BA319F89FBB0029FE30 /* SDWebImageDecoder.m in Sources */,
 				1BA80BAE19F89FBB0029FE30 /* UIImageView+WebCache.m in Sources */,
 				1B1D442019F7A78100607BB5 /* SBJsonStreamWriter.m in Sources */,
+				1B8D68E019FA1C0900DB82BA /* WriteWeiboViewController.m in Sources */,
 				845AAAC419F5379F00E669CD /* Common.m in Sources */,
 				1B1D442119F7A78100607BB5 /* SBJsonStreamWriterAccumulator.m in Sources */,
 				845AAA9B19F5372400E669CD /* Febo.xcdatamodeld in Sources */,
@@ -675,6 +698,7 @@
 				1BA80B9F19F89FBB0029FE30 /* MKAnnotationView+WebCache.m in Sources */,
 				1B1D441E19F7A78100607BB5 /* SBJsonStreamParserAdapter.m in Sources */,
 				1BA80BA919F89FBB0029FE30 /* UIButton+WebCache.m in Sources */,
+				1B8D68E519FA2E5E00DB82BA /* Toast+UIView.m in Sources */,
 				1BA80BA019F89FBB0029FE30 /* NSData+GIF.m in Sources */,
 				1BA80BBD19F8A2E20029FE30 /* MJRefreshFooterView.m in Sources */,
 				845AAACD19F53B2200E669CD /* HomeViewController.m in Sources */,

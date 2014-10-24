@@ -21,8 +21,10 @@
 
 //微博消息通知
 #define DidGetAccessTokenNotification @"DidGetAccessTokenNotification"
+#define DidNotGetAccessTokenNotification @"DidNotGetAccessTokenNotification"
 
 //微博HTTP请求URL
 #define GetFriendsTimeline @"https://api.weibo.com/2/statuses/friends_timeline.json"
+#define PostNewWeibo @"https://api.weibo.com/2/statuses/update.json"
 
 #endif

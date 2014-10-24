@@ -10,6 +10,7 @@
 #import "HomeTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "UserInfoViewController.h"
+#import "WriteWeiboViewController.h"
 
 @interface HomeViewController ()
 
@@ -39,10 +40,13 @@
 
 - (void)loadHomeData
 {
-    //发送微博HTTP请求
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setObject:[self accessToken] forKey:@"access_token"];
-    [WBHttpRequest requestWithAccessToken:[self accessToken] url:GetFriendsTimeline httpMethod:@"GET" params:params delegate:self withTag:nil];
+    //发送微博HTTP请求 .
+    if ([Common CheckLogin]) {
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        [params setObject:[self accessToken] forKey:@"access_token"];
+        [WBHttpRequest requestWithAccessToken:[self accessToken] url:GetFriendsTimeline httpMethod:@"GET" params:params delegate:self withTag:nil];
+    }
+    [refreshHeaderView endRefreshing];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -157,7 +161,9 @@
 #pragma mark 写微博按钮
 - (void)writeWeiboButtonClicked:(UIButton *)sender
 {
-    
+    WriteWeiboViewController *writeWBVC = [[WriteWeiboViewController alloc] init];
+    UINavigationController *writeWBNaVC = [[UINavigationController alloc] initWithRootViewController:writeWBVC];
+    [self presentViewController:writeWBNaVC animated:YES completion:nil];
 }
 
 @end

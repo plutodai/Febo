@@ -19,4 +19,5 @@
 #import "Constant.h"
 #import "AppDelegate.h"
 #import "SBJson.h"
+#import "Toast+UIView.h"
 #endif

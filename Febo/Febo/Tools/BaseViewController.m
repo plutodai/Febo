@@ -45,6 +45,72 @@
     return [[[NSUserDefaults standardUserDefaults] objectForKey:WeiboAuthInfo] objectForKey:@"accessToken"];
 }
 
+- (void)createBackButtonWithImageName:(NSString *)imageName andType:(PushType)type
+{
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    back.frame = CGRectMake(0, 0, 21, 21);
+    [back setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    back.tag = type;
+    [back addTarget:self action:@selector(backToFormViewController:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:back];
+}
+
+- (void)createBackButtonWithTitle:(NSString *)title andType:(PushType)type
+{
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    back.frame = CGRectMake(0, 0, 56, 21);
+    [back setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [back setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
+    [back setTitle:title forState:UIControlStateNormal];
+    [[back titleLabel] setFont:[UIFont systemFontOfSize:14]];
+    back.tag = type;
+    [back addTarget:self action:@selector(backToFormViewController:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:back];
+}
+
+- (void)createRightButtonWithTitle:(NSString *)title tag:(NSInteger)tag
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(0, 0, 56, 21);
+    rightButton.tag = tag;
+    [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rightButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
+    [rightButton setTitle:title forState:UIControlStateNormal];
+    [[rightButton titleLabel] setFont:[UIFont systemFontOfSize:14]];
+    [rightButton addTarget:self action:@selector(modelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+}
+
+- (void)createRightButtonWithImageName:(NSString *)imageName tag:(NSInteger)tag
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(0, 0, 21, 21);
+    rightButton.tag = tag;
+    [rightButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(modelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+}
+
+- (void)backToFormViewController:(UIButton *)sender
+{
+    if (sender.tag == Present) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    if (sender.tag == Push) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)modelButtonAction:(UIButton *)sender
+{
+    rightButtonBlock (sender.tag);
+}
+
+-(void)setRightButtonAction:(RightButtonBlock)ablock
+{
+    rightButtonBlock = [ablock copy];
+}
+
 /*
 #pragma mark - Navigation
 
