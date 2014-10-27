@@ -1,22 +1,21 @@
 //
-//  HomeViewController.m
+//  MentionsViewController.m
 //  Febo
 //
-//  Created by Andrew on 14-10-20.
+//  Created by YY on 14/10/27.
 //  Copyright (c) 2014年 ckdai. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "MentionsViewController.h"
 #import "HomeTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "UserInfoViewController.h"
-#import "WriteWeiboViewController.h"
 
-@interface HomeViewController ()
+@interface MentionsViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation MentionsViewController
 {
     NSString *pageNumber;
 }
@@ -34,57 +33,41 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    weiboList = [[NSMutableArray alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadHomeData) name:DidGetAccessTokenNotification object:nil];
+    self.navigationItem.title = @"@我的";
+    [self createBackButtonWithImageName:@"navigationbar_back" andType:Push];
     refreshHeaderView = [[MJRefreshHeaderView alloc] init];
-    refreshHeaderView.scrollView = homeTable;
-    refreshHeaderView.delegate = self;
     refreshFooterView = [[MJRefreshFooterView alloc] init];
-    refreshFooterView.scrollView = homeTable;
+    refreshFooterView.scrollView = weiboTable;
+    refreshHeaderView.scrollView = weiboTable;
+    refreshHeaderView.delegate = self;
     refreshFooterView.delegate = self;
-    pageNumber = @"1";
-}
-
-- (void)loadHomeData
-{
-    //发送微博HTTP请求 .
+    weiboList = [[NSMutableArray alloc] init];
     if ([Common CheckLogin]) {
-        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-        [params setObject:@"1" forKey:@"page"];
-        [params setObject:[self accessToken] forKey:@"access_token"];
-        [WBHttpRequest requestWithAccessToken:[self accessToken] url:GetFriendsTimeline httpMethod:@"GET" params:params delegate:self withTag:@"refresh"];
-    
+        [self loadMentionsData];
     }
-}
-
-- (void)loadMoreWeibo
-{
-    //发送微博HTTP请求 .
-    if ([Common CheckLogin]) {
-        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-        int page = [pageNumber integerValue];
-        pageNumber = [NSString stringWithFormat:@"%i", ++page];
-        [params setObject:pageNumber forKey:@"page"];
-        [params setObject:[self accessToken] forKey:@"access_token"];
-        [WBHttpRequest requestWithAccessToken:[self accessToken] url:GetFriendsTimeline httpMethod:@"GET" params:params delegate:self withTag:@"loadmore"];
-        
-    }
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.tabBarController.navigationItem.title = @"首页";
-    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
-    [rightButton setImage:[UIImage imageNamed:@"toolbar_compose"] forState:UIControlStateNormal];
-    [rightButton setImage:[UIImage imageNamed:@"toolbar_compose_highlighted"] forState:UIControlStateHighlighted];
-    [rightButton addTarget:self action:@selector(writeWeiboButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadMentionsData
+{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:[self accessToken] forKey:@"access_token"];
+    [params setObject:@"1" forKey:@"page"];
+    [WBHttpRequest requestWithAccessToken:[self accessToken] url:Mentions httpMethod:@"GET" params:params delegate:self withTag:@"refresh"];
+}
+
+- (void)loadMoreMentions
+{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:[self accessToken] forKey:@"access_token"];
+    int page = [pageNumber integerValue];
+    [params setObject:[NSString stringWithFormat:@"%i", ++page] forKey:@"page"];
+    [WBHttpRequest requestWithAccessToken:[self accessToken] url:Mentions httpMethod:@"GET" params:params delegate:self withTag:@"loadmore"];
 }
 
 #pragma mark UITableViewDelegate
@@ -101,7 +84,7 @@
         return [Common heightForString:[weiboInfoDic objectForKey:@"text"] withFontSize:14.0f labelWidth:ScreenWidth - 40] + 66;
     }
     else {
-    return [Common heightForString:[weiboInfoDic objectForKey:@"text"] withFontSize:14.0f labelWidth:ScreenWidth - 40] + 66 + 8 + [Common heightForString:[NSString stringWithFormat:@"@%@:%@", [[repostWeiboInfo objectForKey:@"user"] objectForKey:@"name"], [repostWeiboInfo objectForKey:@"text"]]withFontSize:14 labelWidth:ScreenWidth - 40];
+        return [Common heightForString:[weiboInfoDic objectForKey:@"text"] withFontSize:14.0f labelWidth:ScreenWidth - 40] + 66 + 8 + [Common heightForString:[NSString stringWithFormat:@"@%@:%@", [[repostWeiboInfo objectForKey:@"user"] objectForKey:@"name"], [repostWeiboInfo objectForKey:@"text"]]withFontSize:14 labelWidth:ScreenWidth - 40];
     }
 }
 
@@ -144,6 +127,19 @@
     return cell;
 }
 
+#pragma mark 点击微博用户头像事件
+- (void)userHeaderImagePressed:(UITapGestureRecognizer *)recognizer
+{
+    //    recognizer.view.tag
+    NSDictionary *weiboInfo = [weiboList objectAtIndex:recognizer.view.tag];
+    NSString *userIdStr = [[weiboInfo objectForKey:@"user"] objectForKey:@"idstr"];
+    NSLog(@"微博用户ID:%@",userIdStr);
+    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
+    userInfoVC.uid = userIdStr;
+    [self.navigationController pushViewController:userInfoVC animated:YES];
+    
+}
+
 #pragma mark 微博Http请求的响应
 -(void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
@@ -152,13 +148,13 @@
         [weiboList removeAllObjects];
         NSDictionary *resultDic = [[[SBJsonParser alloc] init] objectWithString:result];
         [weiboList addObjectsFromArray:[resultDic objectForKey:@"statuses"]];
-        [homeTable reloadData];
+        [weiboTable reloadData];
         [refreshHeaderView endRefreshing];
     }
     else if ([request.tag isEqualToString:@"loadmore"]){
         NSDictionary *resultDic = [[[SBJsonParser alloc] init] objectWithString:result];
         [weiboList addObjectsFromArray:[resultDic objectForKey:@"statuses"]];
-        [homeTable reloadData];
+        [weiboTable reloadData];
         [refreshFooterView endRefreshing];
     }
 }
@@ -174,32 +170,17 @@
 -(void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
 {
     if (refreshView == refreshHeaderView) {
-        [self loadHomeData];
+        [self loadMentionsData];
     }
     else {
-        [self loadMoreWeibo];
+        [self loadMoreMentions];
     }
 }
 
-#pragma mark 点击微博用户头像事件
-- (void)userHeaderImagePressed:(UITapGestureRecognizer *)recognizer
+- (void)dealloc
 {
-//    recognizer.view.tag
-    NSDictionary *weiboInfo = [weiboList objectAtIndex:recognizer.view.tag];
-    NSString *userIdStr = [[weiboInfo objectForKey:@"user"] objectForKey:@"idstr"];
-    NSLog(@"微博用户ID:%@",userIdStr);
-    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
-    userInfoVC.uid = userIdStr;
-    [self.navigationController pushViewController:userInfoVC animated:YES];
-    
-}
-
-#pragma mark 写微博按钮
-- (void)writeWeiboButtonClicked:(UIButton *)sender
-{
-    WriteWeiboViewController *writeWBVC = [[WriteWeiboViewController alloc] init];
-    UINavigationController *writeWBNaVC = [[UINavigationController alloc] initWithRootViewController:writeWBVC];
-    [self presentViewController:writeWBNaVC animated:YES completion:nil];
+    [refreshFooterView free];
+    [refreshHeaderView free];
 }
 
 @end

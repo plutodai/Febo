@@ -12,7 +12,8 @@
 @interface HomeViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, WBHttpRequestDelegate, MJRefreshBaseViewDelegate>
 {
     IBOutlet UITableView *homeTable;
-    IBOutlet MJRefreshHeaderView *refreshHeaderView;
+    MJRefreshHeaderView *refreshHeaderView;
+    MJRefreshFooterView *refreshFooterView;
     NSMutableArray *weiboList;
 }
 

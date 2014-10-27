@@ -35,6 +35,7 @@
     userCenterVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:[UIImage imageNamed:@"tabbar_usercenter"] tag:3];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     [tabBarVC setViewControllers:[NSArray arrayWithObjects:homeVC, messageVC, searchVC, userCenterVC, nil]];
+    [tabBarVC.tabBar setSelectedImageTintColor:[UIColor orangeColor]];
     rootNaVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
     self.window.rootViewController = rootNaVC;
     self.window.backgroundColor = [UIColor whiteColor];

@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface SearchViewController : BaseViewController
+@interface SearchViewController : BaseViewController<WBHttpRequestDelegate>
 
 @end

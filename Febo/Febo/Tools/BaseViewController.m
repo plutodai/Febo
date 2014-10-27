@@ -48,7 +48,7 @@
 - (void)createBackButtonWithImageName:(NSString *)imageName andType:(PushType)type
 {
     UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-    back.frame = CGRectMake(0, 0, 21, 21);
+    back.frame = CGRectMake(0, 0, 25, 25);
     [back setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     back.tag = type;
     [back addTarget:self action:@selector(backToFormViewController:) forControlEvents:UIControlEventTouchUpInside];
@@ -84,7 +84,7 @@
 - (void)createRightButtonWithImageName:(NSString *)imageName tag:(NSInteger)tag
 {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightButton.frame = CGRectMake(0, 0, 21, 21);
+    rightButton.frame = CGRectMake(0, 0, 25, 25);
     rightButton.tag = tag;
     [rightButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(modelButtonAction:) forControlEvents:UIControlEventTouchUpInside];

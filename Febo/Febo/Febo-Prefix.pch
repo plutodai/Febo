@@ -20,4 +20,5 @@
 #import "AppDelegate.h"
 #import "SBJson.h"
 #import "Toast+UIView.h"
+#import "WeiboApi.h"
 #endif
